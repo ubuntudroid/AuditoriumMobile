@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">Auditorium_AM1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="labelMainTitleQuestion">The course is over and you still have a question?</string>
+    <string name="labelChooseCourseQuestion">First, choose the course for your post:</string>
+    <string name="labelTypeSubjectQuestion">Second, the subject for your post:</string>
+    <string name="labelTypeContentQuestion">Third, the content of your post:</string>
+    <string name="buttonSubmitQuestion">Submit Question</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="listTitle">Recent activity</string>
+    <string name="buttonAskQuestion">Ask a question</string>
+    <string name="errorEmptyString">One or more fields are empty! </string>
+    <string name="buttonCancelQuestion">Cancel</string>
+    <string name="checkBoxToAskAprivateQuestion">Check to ask a private question. Private question may only be seen by maintainers and editors of this course. If not available admins will receive your message.</string>
+    <string name="checkedBox">You have chacked the question as a private</string>
+    <string name="title_activity_list_question">ListQuestionActivity</string>
+    <string name="title_activity_show_question">ShowQuestionActivity</string>
+
+</resources>
