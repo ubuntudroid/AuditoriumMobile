@@ -1,8 +1,5 @@
 package com.activities.am1;
 
-
-
-import com.activities.am1.*;
 import com.models.am1.Question;
 
 import android.os.Bundle;
@@ -16,6 +13,11 @@ import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+/**
+ * AddQuestionActivity
+ * Created on November 18, 2012
+ * @author Valentina Pontillo <a href =  mailto : v.pontillo@studenti.unina.it">v.pontillo@studenti.unina.it</a>
+ */
 public class AddQuestionActivity extends Activity {
 	Button   buttonSubmitQuestion = null;
 	EditText courseTextField  = null;
@@ -24,6 +26,11 @@ public class AddQuestionActivity extends Activity {
 	CheckBox chkPrivateQuestion = null;
 	ScrollView scrollViewGeneralView = null;
 
+	/**
+	 * Default method to create an activity in which there is control if the button Submit Question is pushed
+	 * or the checkbox is checked.
+	 * @param savedInstanceState Bundle
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,15 +51,24 @@ public class AddQuestionActivity extends Activity {
 			}
 		});
 	}
-
+	/**
+	 * This method permits to show an advertisement message if checkbox is checked.
+	 * @param v View
+	 */
 	public void  manageCheckBox(View v) {
-		//if is checked there is an advertissment message
+		//if is checked there is an advertisement message
 		if (((CheckBox) v).isChecked()) {
 			Toast.makeText(AddQuestionActivity.this, R.string.checkedBox, Toast.LENGTH_LONG).show();
 
 		}
 	}
-
+	/**
+	 * This method permits on first thing to do a control if there are any empty field,
+	 * to  fill in the parameters in each field and finally to create a new object Question.
+	 * This object is passed to another activity through the use of an  intent  and  it is looking forward to the results.
+	 * Finally the activity is  terminated and when the user push the come back button, the activity is deallocated.  
+	 * @param v View
+	 */
 	public void manageButton(View v) {
 		// TODO Auto-generated method stub
 		String course  = courseTextField.getText().toString();
