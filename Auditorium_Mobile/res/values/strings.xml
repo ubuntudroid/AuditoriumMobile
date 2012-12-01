@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">Auditorium_AM1_</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="labelMainTitleQuestion">The course is over and you still have a question?</string>
+    <string name="labelChooseCourseQuestion">First, choose the course for your post:</string>
+    <string name="labelTypeSubjectQuestion">Second, the subject for your post:</string>
+    <string name="labelTypeContentQuestion">Third, the content of your post:</string>
+    <string name="buttonSubmitQuestion">Submit Question</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="listTitle">Recent activity</string>
+    <string name="buttonAskQuestion">Ask a question</string>
+    <string name="errorEmptyString">One or more fields are empty! </string>
+    <string name="errorEmptyAnswerContent">The content of the answer cannot be empty! </string>
+    <string name="buttonCancelQuestion">Cancel</string>
+    <string name="checkBoxToAskAprivateQuestion">Check to ask a private question. Private question may only be seen by maintainers and editors of this course. If not available admins will receive your message.</string>
+    <string name="checkedBox">You have chacked the question as a private</string>
+    <string name="title_activity_list_question">ListQuestionActivity</string>
+    <string name="title_activity_show_question">ShowQuestionActivity</string>
+    <string name="label_AnswerTitle_show_question">Answers</string>
+    <string name="label_Title_AddAnAnswer">Can you answer the question?</string>
+    <string name="label_AnswerSubTitle_show_question">sorted by rating</string>
+    <string name="label_Answer_AddAnswer">Add an answer.</string>
+    <string name="buttonSubmitAnswer">Submit your answer</string>
+    <string name="buttonAnswerQuestion">Answer</string>
+    <string name="buttonCommentQuestion">Comment</string>
+    <string name="label_SubTitle_AddAnAnswer">If not, add a comment.</string>
+    <string name="title_activity_add_answer">AddAnswerActivity</string>
+    
+    
+    
+
+</resources>
