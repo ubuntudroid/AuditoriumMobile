@@ -28,7 +28,29 @@
     <string name="label_SubTitle_AddAnAnswer">If not, add a comment.</string>
     <string name="title_activity_add_answer">AddAnswerActivity</string>
     
-    
-    
+    <!-- login strings -->
+    <string name="logo">Logo</string>
+    <string name="welcome">Welcome to auditorium</string>
+    <string name="welcome2">A way to change communication on your campus!</string>
+    <string name="mail">Email address</string>
+    <string name="Pass">Password</string>
+    <string name="SingIn">Sing in</string>
+    <string name="Reg">Register with yout TU Dresden email address</string>
+    <string name="Change">We can change your email address for you!</string>
+    <string name="Already">Already registered with a non-TU Dresden email address?</string>
+    <string name="QoP">Questions or problems?</string>
+    <string name="QoPReq">You can send us an email (german or english)</string>
+    <string name="orTweet">or a tweet </string>
+    <string name="Tweet">to @_auditorium</string>
+    <string name="SignUp2">Sign up!</string>
+    <string name="Username">Username</string>
+    <string name="PassConf">Password Confirmation</string>
+    <string name="SignUp">Sign up</string>
+    <string name="AlreadySign">Already have an account? Sign in.</string>
+    <string name="Forgot">Forgot your password? </string>
+    <string name="Didnt">Didnt receive confirmation instructions?</string>
+    <string name="errorLogin">Passwords are not equal!</string>
+    <string name="LoginIn">Login in. </string>
+    <string name="Registering">Registering</string>
 
 </resources>

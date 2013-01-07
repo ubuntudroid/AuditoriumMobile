@@ -11,17 +11,28 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_action_search=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
+        public static final int fail=0x7f020000;
+        public static final int ic_action_search=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int logo=0x7f020003;
+        public static final int success=0x7f020004;
     }
     public static final class id {
+        public static final int Already_reg=0x7f070027;
+        public static final int Change=0x7f070028;
+        public static final int ConfirmInst=0x7f070031;
+        public static final int ForgotPass=0x7f070030;
         public static final int LinearLayout2=0x7f07000e;
         public static final int LinearLayoutListQuestion=0x7f070011;
         public static final int LinearLayout_AddQuestion=0x7f070001;
         public static final int LinearLayout_AnswerComment_ShowQuestionActivity=0x7f07001c;
+        public static final int QoP_Req=0x7f070029;
         public static final int RelativeLayoutListQuestion=0x7f070012;
         public static final int ScrollView01=0x7f070005;
         public static final int ScrollView_AnswerQuestionActivity=0x7f070000;
+        public static final int Tweet=0x7f07002a;
+        public static final int btnLogin=0x7f070025;
+        public static final int btnRegister=0x7f07002f;
         public static final int buttonListQuestion=0x7f070014;
         public static final int button_Answer_AnswerQuestionActivity=0x7f07001d;
         public static final int button_CancellQuestion_CancelQuestion=0x7f070010;
@@ -36,8 +47,16 @@ public final class R {
         public static final int editText_CourseQuestion_ShowQuestion=0x7f070015;
         public static final int editText_SubjectQuestion_AddQuestion=0x7f07000a;
         public static final int editText_SubjectQuestion_ShowQuestion=0x7f070016;
+        public static final int emailAddress=0x7f070023;
+        public static final int header=0x7f070022;
+        public static final int link_to_register=0x7f070026;
         public static final int listview_ShowQuestionActivity=0x7f07001a;
-        public static final int menu_settings=0x7f070022;
+        public static final int menu_settings=0x7f070032;
+        public static final int password=0x7f070024;
+        public static final int reg_conf_password=0x7f07002e;
+        public static final int reg_email=0x7f07002c;
+        public static final int reg_password=0x7f07002d;
+        public static final int reg_user_name=0x7f07002b;
         public static final int textViewCourse=0x7f070020;
         public static final int textViewListQuestion=0x7f070013;
         public static final int textViewTitle=0x7f070021;
@@ -58,12 +77,33 @@ public final class R {
         public static final int activity_show_question=0x7f030003;
         public static final int element_list_answer=0x7f030004;
         public static final int element_list_question=0x7f030005;
+        public static final int header_gradient=0x7f030006;
+        public static final int login=0x7f030007;
+        public static final int main=0x7f030008;
+        public static final int register=0x7f030009;
     }
     public static final class menu {
         public static final int activity_main=0x7f060000;
         public static final int activity_show_question=0x7f060001;
     }
     public static final class string {
+        public static final int Already=0x7f040023;
+        public static final int AlreadySign=0x7f04002c;
+        public static final int Change=0x7f040022;
+        public static final int Didnt=0x7f04002e;
+        public static final int Forgot=0x7f04002d;
+        public static final int LoginIn=0x7f040030;
+        public static final int Pass=0x7f04001f;
+        public static final int PassConf=0x7f04002a;
+        public static final int QoP=0x7f040024;
+        public static final int QoPReq=0x7f040025;
+        public static final int Reg=0x7f040021;
+        public static final int Registering=0x7f040031;
+        public static final int SignUp=0x7f04002b;
+        public static final int SignUp2=0x7f040028;
+        public static final int SingIn=0x7f040020;
+        public static final int Tweet=0x7f040027;
+        public static final int Username=0x7f040029;
         public static final int app_name=0x7f040000;
         public static final int buttonAnswerQuestion=0x7f040017;
         public static final int buttonAskQuestion=0x7f04000a;
@@ -75,6 +115,7 @@ public final class R {
         public static final int checkedBox=0x7f04000f;
         public static final int errorEmptyAnswerContent=0x7f04000c;
         public static final int errorEmptyString=0x7f04000b;
+        public static final int errorLogin=0x7f04002f;
         public static final int hello_world=0x7f040001;
         public static final int labelChooseCourseQuestion=0x7f040004;
         public static final int labelMainTitleQuestion=0x7f040003;
@@ -86,11 +127,18 @@ public final class R {
         public static final int label_SubTitle_AddAnAnswer=0x7f040019;
         public static final int label_Title_AddAnAnswer=0x7f040013;
         public static final int listTitle=0x7f040009;
+        /**  login strings 
+         */
+        public static final int logo=0x7f04001b;
+        public static final int mail=0x7f04001e;
         public static final int menu_settings=0x7f040002;
+        public static final int orTweet=0x7f040026;
         public static final int title_activity_add_answer=0x7f04001a;
         public static final int title_activity_list_question=0x7f040010;
         public static final int title_activity_main=0x7f040008;
         public static final int title_activity_show_question=0x7f040011;
+        public static final int welcome=0x7f04001c;
+        public static final int welcome2=0x7f04001d;
     }
     public static final class style {
         public static final int AppTheme=0x7f050000;
