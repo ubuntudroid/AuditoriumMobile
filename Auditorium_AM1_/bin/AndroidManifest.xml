@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.activities.am1"
     android:versionCode="1"
@@ -11,23 +12,65 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".ListPublicQuestionActivity"
-            android:label="@string/title_activity_list_question" >
+    
+        <!-- Main Activity: LoginActivity -->
+        <activity android:name=".LoginActivity"
+                  android:label="Login to your Account"
+                  android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <!-- Activity Result login -->
+        <activity android:name=".SendLoginRequestActivity"
+        		  android:label="Login Request"
+        		  android:windowSoftInputMode="stateHidden"  >
+        </activity>
+             
+                
+        <!-- Activity Register new account -->
+        <activity android:name=".RegisterActivity"
+        		  android:label="Register New Account"
+        		  android:windowSoftInputMode="stateHidden"  >
+        </activity>
+        
+         <!-- Activity Result Register -->
+        <activity android:name=".SendRegisterRequestActivity"
+        		  android:label="Register Request"
+        		  android:windowSoftInputMode="stateHidden"  >
+        </activity>
+        
+        <!-- Activity List Questions -->
+        <activity
+            android:name=".ListPublicQuestionActivity"
+            android:label="@string/title_activity_list_question" >
+        </activity>
+        
+        <!-- Activity  Add Questions-->
         <activity
             android:name=".AddQuestionActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        
+        <!-- Activity  Show Questions-->
         <activity
             android:name=".ShowQuestionActivity"
             android:label="@string/title_activity_show_question" >
         </activity>
+        
+        <!-- Activity  Answer-->
+        <activity
+            android:name=".AddAnswerActivity"
+            android:label="@string/title_activity_add_answer" >
+            </activity>
     </application>
+    
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+ 
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

@@ -23,9 +23,22 @@
             </intent-filter>
         </activity>
         
+        <!-- Activity Result login -->
+        <activity android:name=".SendLoginRequestActivity"
+        		  android:label="Login Request"
+        		  android:windowSoftInputMode="stateHidden"  >
+        </activity>
+             
+                
         <!-- Activity Register new account -->
         <activity android:name=".RegisterActivity"
         		  android:label="Register New Account"
+        		  android:windowSoftInputMode="stateHidden"  >
+        </activity>
+        
+         <!-- Activity Result Register -->
+        <activity android:name=".SendRegisterRequestActivity"
+        		  android:label="Register Request"
         		  android:windowSoftInputMode="stateHidden"  >
         </activity>
         
@@ -51,7 +64,7 @@
         <activity
             android:name=".AddAnswerActivity"
             android:label="@string/title_activity_add_answer" >
-        </activity>
+            </activity>
     </application>
     
     <!-- Internet Permissions -->

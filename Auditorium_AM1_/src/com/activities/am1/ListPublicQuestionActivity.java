@@ -51,9 +51,16 @@ public class ListPublicQuestionActivity extends ListActivity {
 		//Model: List<Question>
 		//Controller: Adapter
 		//View: ListView o ListActivity
-
+		questionsList.add(new Question("Support Center","Kann man als Member auch Announcements posten?","Wollte im konkreten Fall eine URL mit den anderen Membern teilen"));
+		questionsList.add(new Question("Intelligente Systeme", "Passwort", "Wir sollen das ja in der Übungsaufgabe ja anhand unserer Ergebnisse berechnen und zurückgeben. Gibt es dafür einen einfachen Weg, ohne numerische Methoden zu implementieren?"));
+		questionsList.add(new Question("Distributed Systems","what's the granularity?","in the comparison of client/server model and distributed object-oriented model, there is an granularity. What's the meaning of granularity?"));		
+		questionsList.add(new Question("Software Fault Toleranc","When will the third task be released?","Hey Diogo, when will the third task be released?"));
+		questionsList.add(new Question("Dystributed System", "book", "what is the title of the reference book?"));
+		questionsList.add(new Question("Security & Cryptography", "teacher", "who is the teacher?"));
+		questionsList.add(new Question("Allgemeine und sonstige Fragen","Praktomat offline?","Heyho,ich wollte mal überprüfen ob der Praktomat noch funktioniert, aber beim Verbinden mit der Seite gibt ein Verbindungsproblem. Hat ihn wer offline genommen und wann kommt der wieder online?"));
+		
 		//list of question passed to adapter
-		questionListAdapter = new ListQuestionAdapter(this, questionsList,R.layout.element_list);
+		questionListAdapter = new ListQuestionAdapter(this, questionsList,R.layout.element_list_question);
 		//pass  adapter to view
 		this.setListAdapter(questionListAdapter);
 	}

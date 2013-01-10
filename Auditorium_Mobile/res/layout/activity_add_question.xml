@@ -81,14 +81,14 @@
             android:text="@string/checkBoxToAskAprivateQuestion"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:typeface="serif" />
-
+
+
         <LinearLayout
             android:id="@+id/LinearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:gravity="bottom|fill"
-            style="@android:style/ButtonBar"
             android:orientation="horizontal" >
 
             <Button
@@ -107,5 +107,6 @@
                 android:text="@string/buttonCancelQuestion"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </LinearLayout> 
+    </ScrollView>
+    

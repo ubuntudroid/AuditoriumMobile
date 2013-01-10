@@ -1,54 +1,134 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView01"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scrollbarAlwaysDrawVerticalTrack="true" >
-
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <EditText
+        <TextView
             android:id="@+id/editText_CourseQuestion_ShowQuestion"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
-            android:editable="false"
+            android:text="@string/labelChooseCourseQuestion"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <EditText
+        <TextView
             android:id="@+id/editText_SubjectQuestion_ShowQuestion"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:background="@android:color/white"
-            android:editable="false"
+            android:text="@string/labelTypeSubjectQuestion"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold" />
 
-        <EditText
+        <TextView
             android:id="@+id/editText_ContentQuestion_ShowQuestion"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
             android:background="@android:color/white"
-            android:editable="false"
+            android:text="@string/labelTypeContentQuestion"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
             android:background="@android:color/darker_gray" />
-    </LinearLayout>
 
-</ScrollView>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView_AnswersTitleQuestion_ShowQuestionActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/white"
+                android:text="@string/label_AnswerTitle_show_question"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView_AnswersSubTitleQuestion_ShowQuestionActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/white"
+                android:text="@string/label_AnswerSubTitle_show_question"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview_ShowQuestionActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1.0"
+            android:scrollbars="vertical"/>
+       
+
+        <TextView
+            android:id="@+id/textView_AnswersTitle_AnswerQuestionActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:text="@string/label_Title_AddAnAnswer"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView_AnswersSubTitle_AnswerQuestionActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:text="@string/label_SubTitle_AddAnAnswer"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_AnswerComment_ShowQuestionActivity"
+            android:orientation="horizontal" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/ButtonBar">
+
+            <Button
+                android:id="@+id/button_Answer_AnswerQuestionActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/buttonAnswerQuestion"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <Button
+                android:id="@+id/button_Comment_AnswerQuestionActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/buttonCommentQuestion"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </LinearLayout>
+
+       
+    </LinearLayout>

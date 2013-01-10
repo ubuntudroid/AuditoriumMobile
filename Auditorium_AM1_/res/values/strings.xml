@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Auditorium_AM1</string>
+    <string name="app_name">Auditorium_AM1_</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="labelMainTitleQuestion">The course is over and you still have a question?</string>
@@ -12,10 +12,53 @@
     <string name="listTitle">Recent activity</string>
     <string name="buttonAskQuestion">Ask a question</string>
     <string name="errorEmptyString">One or more fields are empty! </string>
+    <string name="errorEmptyAnswerContent">The content of the answer cannot be empty! </string>
     <string name="buttonCancelQuestion">Cancel</string>
     <string name="checkBoxToAskAprivateQuestion">Check to ask a private question. Private question may only be seen by maintainers and editors of this course. If not available admins will receive your message.</string>
     <string name="checkedBox">You have chacked the question as a private</string>
     <string name="title_activity_list_question">ListQuestionActivity</string>
     <string name="title_activity_show_question">ShowQuestionActivity</string>
-
+    <string name="label_AnswerTitle_show_question">Answers</string>
+    <string name="label_Title_AddAnAnswer">Can you answer the question?</string>
+    <string name="label_AnswerSubTitle_show_question">sorted by rating</string>
+    <string name="label_Answer_AddAnswer">Add an answer.</string>
+    <string name="buttonSubmitAnswer">Submit your answer</string>
+    <string name="buttonAnswerQuestion">Answer</string>
+    <string name="buttonCommentQuestion">Comment</string>
+    <string name="label_SubTitle_AddAnAnswer">If not, add a comment.</string>
+    <string name="title_activity_add_answer">AddAnswerActivity</string>
+    
+    <!-- login strings -->
+    <string name="logo">Logo</string>
+    <string name="welcome">Welcome to auditorium</string>
+    <string name="welcome2">A way to change communication on your campus!</string>
+    <string name="mail">Email address</string>
+    <string name="Pass">Password</string>
+    <string name="SingIn">Sing in</string>
+    <string name="Reg">Register with yout TU Dresden email address</string>
+    <string name="Change">We can change your email address for you!</string>
+    <string name="Already">Already registered with a non-TU Dresden email address?</string>
+    <string name="QoP">Questions or problems?</string>
+    <string name="QoPReq">You can send us an email (german or english)</string>
+    <string name="orTweet">or a tweet </string>
+    <string name="Tweet">to @_auditorium</string>
+    <string name="SignUp2">Sign up!</string>
+    <string name="Username">Username</string>
+    <string name="PassConf">Password Confirmation</string>
+    <string name="SignUp">Sign up</string>
+    <string name="AlreadySign">Already have an account? Sign in.</string>
+    <string name="Forgot">Forgot your password? </string>
+    <string name="Didnt">Didnt receive confirmation instructions?</string>
+    <string name="errorLogin">Passwords are not equal!</string>
+    <string name="LoginIn">Login in. </string>
+    <string name="Registering">Registering</string>
+	<string name="checkBoxTeacher">Check it if you want to login as teacher</string>
+	<string name="checkBoxTeacherReg">Check it if you want to register as teacher</string>
+	
+	<string name="question">question</string>
+	<string name="answer">answer</string>
+	<string name="riga1">riga1</string>
+	<string name="riga2">riga2</string>
+	<string name="risposta">risposta</string>
+	
 </resources>

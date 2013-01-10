@@ -52,5 +52,13 @@
     <string name="errorLogin">Passwords are not equal!</string>
     <string name="LoginIn">Login in. </string>
     <string name="Registering">Registering</string>
-
+	<string name="checkBoxTeacher">Check it if you want to login as teacher</string>
+	<string name="checkBoxTeacherReg">Check it if you want to register as teacher</string>
+	
+	<string name="question">question</string>
+	<string name="answer">answer</string>
+	<string name="riga1">riga1</string>
+	<string name="riga2">riga2</string>
+	<string name="risposta">risposta</string>
+	
 </resources>
