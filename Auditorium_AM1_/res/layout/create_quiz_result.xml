@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@layout/header_gradient" >
+
+  <RelativeLayout 
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content" 
+  		android:background="#ffffff" >
+  		 		
+  		<!--  Header  Starts-->
+  		<LinearLayout android:id="@+id/header"
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:background="@layout/header_gradient"
+  				android:paddingTop="5dip"
+  				android:paddingBottom="5dip">
+  				<!-- Logo Start-->
+
+  				<ImageView
+  				    android:layout_width="match_parent"
+  				    android:layout_height="wrap_content"
+  				    android:layout_marginLeft="10dip"
+  				    android:contentDescription="@string/logo" 
+  				    android:src="@drawable/logo" />
+
+  				<!-- Logo Ends -->
+  		</LinearLayout>
+  		<!--  Header Ends --> 
+  		
+  		<!-- Create Quiz Form Begins -->
+  		<LinearLayout
+		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  android:orientation="vertical"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content"
+		  android:padding="10dip"
+		  android:layout_below="@id/header">
+		 
+		  <TextView android:id="@+id/TextView_quiz_question_result" 
+		      	android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:paddingBottom="5dip"
+		  		android:textColor="#372c24"
+		  		android:textSize="15sp"
+		  		android:text="@string/textview_post_quiz2"/>
+
+		  <RadioButton
+		      android:id="@+id/radioButton_quiz_result"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:text="RadioButton" />
+		 		
+		 <Button
+		     android:id="@+id/Button_publish_quiz_result"
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:text="@string/Button_publish_quiz_result" />
+		    
+	</LinearLayout>
+  		
+  		
+  	</RelativeLayout>
+</LinearLayout>

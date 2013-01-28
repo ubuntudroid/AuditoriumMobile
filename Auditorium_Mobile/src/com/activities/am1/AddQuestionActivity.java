@@ -17,6 +17,8 @@ import android.widget.Toast;
  * AddQuestionActivity
  * Created on November 18, 2012
  * @author Valentina Pontillo <a href =  mailto : v.pontillo@studenti.unina.it">v.pontillo@studenti.unina.it</a>
+ * updated by Bernardo Plaza
+ * last updated January 10th, 2013
  */
 public class AddQuestionActivity extends Activity {
 	Button   buttonSubmitQuestion = null;
@@ -25,6 +27,7 @@ public class AddQuestionActivity extends Activity {
 	EditText contentTextField = null;
 	CheckBox chkPrivateQuestion = null;
 	ScrollView scrollViewGeneralView = null;
+	String questionAuthor=null;
 
 	/**
 	 * Default method to create an activity in which there is control if the button Submit Question is pushed
@@ -40,6 +43,9 @@ public class AddQuestionActivity extends Activity {
 		contentTextField     = (EditText) findViewById(R.id.editText_ContentQuestion_AddQuestion);
 		buttonSubmitQuestion = (Button)   findViewById(R.id.button_SubmitQuestion_AddQuestion);
 		chkPrivateQuestion   = (CheckBox) findViewById(R.id.chekBox_PrivateQuestion_AddQuestion);
+		
+		questionAuthor=getUser();
+		
 		buttonSubmitQuestion.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				manageButton(v);
@@ -82,8 +88,8 @@ public class AddQuestionActivity extends Activity {
 		}
 		else{
 
-			/*Create an obj Question with three field*/
-			Question question = new Question(course,subject,content);
+			/*Create an obj Question with 5 field, the number of rates will be 0 at first*/
+			Question question = new Question(course,subject,content,questionAuthor,0);
 
 			/*Create a new Intent with a source and destination */
 			Intent chekBoxIntent = new Intent(AddQuestionActivity.this, ListPublicQuestionActivity.class);
@@ -98,5 +104,14 @@ public class AddQuestionActivity extends Activity {
 			 back button the activity is still there */
 			finish();
 		}
+	}
+	
+	/**
+	 * This method ask is used to get the user data in order to show it on the post
+	 * @return user
+	 */
+	public  String getUser (){
+		//!ask the server for the user name.
+		return ("Berny");
 	}
 }

@@ -7,9 +7,18 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.TextView;
 
+/**
+ * VerticalTextView
+ * Created on Januar 8, 2013
+ * @author Bernardo Plaza 
+ */
 public class VerticalTextView extends TextView{
 	final boolean topDown;
-
+	
+	/**This class is used to adapt a TextView element.
+	 * And allow us to represent it in vertical 
+	 */
+	
 	public VerticalTextView(Context context, AttributeSet attrs){
 		super(context, attrs);
 		final int gravity = getGravity();

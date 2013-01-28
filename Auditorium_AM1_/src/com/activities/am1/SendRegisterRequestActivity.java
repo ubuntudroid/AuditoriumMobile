@@ -8,10 +8,11 @@ import android.widget.TextView;
 
 public class SendRegisterRequestActivity extends Activity {
 	@Override
-	public void onCreate (Bundle savedIntanceState){
+	public void onCreate (Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login_result);
 		Bundle bundle = getIntent().getExtras();
-		TextView txtEmailReg = (TextView) findViewById(R.id.emailAddress_res);
+		TextView txtEmailReg = (TextView) findViewById(R.id.User_res);
 		TextView txtPasswordReg = (TextView) findViewById(R.id.password_res);
 		CheckBox checkBoxTeacherReg = (CheckBox) findViewById(R.id.chekBox_teacher_reg_res);
 		
@@ -25,6 +26,6 @@ public class SendRegisterRequestActivity extends Activity {
 		else checkBoxTeacherReg.setChecked(false);
 		
 	}
-	
+	//! send data to server and wait the response, if success go to List PublicQuestionActivity if not return
 
 }

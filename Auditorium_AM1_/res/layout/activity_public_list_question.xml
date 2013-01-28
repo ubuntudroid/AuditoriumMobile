@@ -1,40 +1,32 @@
-
- <LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/LinearLayoutListQuestion"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@layout/header_gradient" 
         android:orientation="vertical" >
+        
+	<TextView
+	    android:id="@+id/textViewListQuestion"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:text="@string/listTitle"
+	    android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	
 
-        <RelativeLayout
-            android:id="@+id/RelativeLayoutListQuestion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@android:style/ButtonBar"
-            android:orientation="horizontal" >
+	
 
-            <TextView
-                android:id="@+id/textViewListQuestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:text="@string/listTitle"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewListQuestion" >
+    </ListView>
 
-            <Button
-                android:id="@+id/buttonListQuestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="@string/buttonAskQuestion" />
-        </RelativeLayout>
-
-        <ListView
-            android:id="@android:id/list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-        </ListView>
-    </LinearLayout>
-
+</RelativeLayout>

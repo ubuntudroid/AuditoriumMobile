@@ -58,8 +58,8 @@
 		  <TextView android:layout_width="fill_parent"
 		  		android:layout_height="wrap_content"
 		  		android:textColor="#372c24"
-		  		android:text="@string/mail"/>
-		  <EditText android:id="@+id/EditText_emailAddress"
+		  		android:text="@string/Username"/>
+		  <EditText android:id="@+id/EditText_user_login"
 		      	android:layout_width="fill_parent"
 		  		android:layout_height="wrap_content"
 		  		android:layout_marginTop="5dip"
@@ -95,6 +95,7 @@
 		  		android:layout_width="fill_parent"
 		  		android:layout_height="wrap_content"
 		  		android:layout_marginTop="10dip"
+		  		
 		  		android:text="@string/SingIn"/>
 		  
 		  <!-- Link to registration -->	
@@ -151,6 +152,6 @@
 		    
 		</LinearLayout>
   		<!-- Login Form Ends -->
-  		  		
-  </RelativeLayout>
+  		
+  	</RelativeLayout>
 </ScrollView>

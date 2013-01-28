@@ -8,20 +8,22 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
 
-    <application
+     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
     
-        <!-- Main Activity: LoginActivity -->
+              
+       <!-- Main Activity: LoginActivity  -->  
         <activity android:name=".LoginActivity"
-                  android:label="Login to your Account"
+                  android:label="Auditorium Mobile"
                   android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> 
+      
         
         <!-- Activity Result login -->
         <activity android:name=".SendLoginRequestActivity"
@@ -44,27 +46,53 @@
         
         <!-- Activity List Questions -->
         <activity
-            android:name=".ListPublicQuestionActivity"
+            android:name="ListQuestionsActivity"
             android:label="@string/title_activity_list_question" >
         </activity>
         
         <!-- Activity  Add Questions-->
         <activity
             android:name=".AddQuestionActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main" 
+			android:windowSoftInputMode="stateHidden"  >
         </activity>
         
         <!-- Activity  Show Questions-->
         <activity
             android:name=".ShowQuestionActivity"
-            android:label="@string/title_activity_show_question" >
+            android:label="@string/title_activity_show_question" 
+			android:windowSoftInputMode="stateHidden"  >
         </activity>
         
         <!-- Activity  Answer-->
         <activity
             android:name=".AddAnswerActivity"
-            android:label="@string/title_activity_add_answer" >
+            android:label="@string/title_activity_add_answer" 
+			android:windowSoftInputMode="stateHidden"  >
             </activity>
+            
+         <!-- Activity  Show Answer-->
+        <activity
+            android:name=".ShowAnswerActivity"
+            android:label="@string/title_activity_add_answer" 
+			android:windowSoftInputMode="stateHidden"  >
+            </activity>
+            
+        <!-- Create Quiz-->
+        <activity
+            android:name=".CreateQuizActivity"
+            android:label="Create Quiz" 
+			android:windowSoftInputMode="stateHidden"  >
+            </activity>
+        
+         <!-- Create Quiz Result-->
+        <activity
+            android:name=".CreateQuizResultActivity"
+            android:label="Create Quiz Result" 
+			android:windowSoftInputMode="stateHidden"  >
+            </activity>
+            
+        
     </application>
     
     <!-- Internet Permissions -->

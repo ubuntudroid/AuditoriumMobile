@@ -1,10 +1,13 @@
 package com.activities.am1;
 
+import com.models.am1.Constant;
 import com.models.am1.Question;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.text.format.Time;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -17,6 +20,8 @@ import android.widget.Toast;
  * AddQuestionActivity
  * Created on November 18, 2012
  * @author Valentina Pontillo <a href =  mailto : v.pontillo@studenti.unina.it">v.pontillo@studenti.unina.it</a>
+ * updated by Bernardo Plaza
+ * last updated January 10th, 2013
  */
 public class AddQuestionActivity extends Activity {
 	Button   buttonSubmitQuestion = null;
@@ -25,6 +30,9 @@ public class AddQuestionActivity extends Activity {
 	EditText contentTextField = null;
 	CheckBox chkPrivateQuestion = null;
 	ScrollView scrollViewGeneralView = null;
+	String questionAuthor=null;
+	String questionDate=null;
+	int privated =0;
 
 	/**
 	 * Default method to create an activity in which there is control if the button Submit Question is pushed
@@ -40,6 +48,11 @@ public class AddQuestionActivity extends Activity {
 		contentTextField     = (EditText) findViewById(R.id.editText_ContentQuestion_AddQuestion);
 		buttonSubmitQuestion = (Button)   findViewById(R.id.button_SubmitQuestion_AddQuestion);
 		chkPrivateQuestion   = (CheckBox) findViewById(R.id.chekBox_PrivateQuestion_AddQuestion);
+		Bundle bundleAddQuestion = getIntent().getExtras();
+		questionAuthor = bundleAddQuestion.getString("UserLoged");
+		
+		questionDate = getDateData();
+		
 		buttonSubmitQuestion.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				manageButton(v);
@@ -59,8 +72,9 @@ public class AddQuestionActivity extends Activity {
 		//if is checked there is an advertisement message
 		if (((CheckBox) v).isChecked()) {
 			Toast.makeText(AddQuestionActivity.this, R.string.checkedBox, Toast.LENGTH_LONG).show();
-
+			privated=1;
 		}
+		else privated =0;
 	}
 	/**
 	 * This method permits on first thing to do a control if there are any empty field,
@@ -76,17 +90,18 @@ public class AddQuestionActivity extends Activity {
 		String content = contentTextField.getText().toString();
 
 		/*We don't want empty fields so we have to check on subject,course and content field */
-		if(subject.equals("") || course.equals("") || content.equals("")){
+		if(subject.equals("") || course.equals("") || content.equals("") 
+				&& (content.length()< Constant.MINIMUM_QUESTION_SIZE)){
 			/*show a message for a long(or short)period */
 			Toast.makeText(this, R.string.errorEmptyString, Toast.LENGTH_LONG).show();
 		}
 		else{
 
-			/*Create an obj Question with three field*/
-			Question question = new Question(course,subject,content);
+			/*Create an obj Question with 8 field, the number of rates will be 0 at first*/
+			Question question = new Question(Constant.NEW_QUESTION,course,subject,content,questionAuthor,questionDate,0,privated);
 
 			/*Create a new Intent with a source and destination */
-			Intent chekBoxIntent = new Intent(AddQuestionActivity.this, ListPublicQuestionActivity.class);
+			Intent chekBoxIntent = new Intent(AddQuestionActivity.this, ListQuestionsActivity.class);
 
 			/*There is the obj Question to pass to the other activity (destination)*/
 			chekBoxIntent.putExtra("question", question);
@@ -98,5 +113,30 @@ public class AddQuestionActivity extends Activity {
 			 back button the activity is still there */
 			finish();
 		}
+	}
+	
+	
+	/**
+	 * This method get the local time and return it formated "MM.DD.YYYY at HH:MM:SS" 
+	 * @return date
+	 */
+	public String getDateData(){
+		Time today = new Time(Time.getCurrentTimezone());
+		today.setToNow();
+		String date= today.format("%d.%m.%Y at %H:%M:%S");
+		return date;
+	}
+	
+	/**
+	 * kill the activity if back button is pressed
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event)
+	{
+	    if ((keyCode == KeyEvent.KEYCODE_BACK))
+	    {
+	        finish();
+	    }
+	    return super.onKeyDown(keyCode, event);
 	}
 }

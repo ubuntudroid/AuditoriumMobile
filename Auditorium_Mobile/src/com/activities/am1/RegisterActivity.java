@@ -12,7 +12,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ *  RegisterActivity
+ *  Created on January 8th, 2013
+ *  @author Berny
+ *
+ */
 public class RegisterActivity extends Activity {
     
 	TextView loginScreen = null;
@@ -26,6 +31,10 @@ public class RegisterActivity extends Activity {
     CheckBox chkLogAsTeacherRegister = null;
     Button buttonReg= null;
 	
+    /**   
+    * This activity allows to register a new user.
+ 	*/
+     
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +50,8 @@ public class RegisterActivity extends Activity {
         confirmPassReg =(TextView) findViewById(R.id.reg_conf_password);
         buttonReg = (Button) findViewById(R.id.btnRegister);
         chkLogAsTeacherRegister =(CheckBox)findViewById (R.id.chekBox_teacher_reg);
+        
+        /* Listeners of the clickable items such us button and links*/
         
         // Listening to Register button
         buttonReg.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +95,12 @@ public class RegisterActivity extends Activity {
         
     }
 	
+	/**
+     * manageRegButton check first if there is some text in the different fields
+     * then a bundle element is created to send the information to the other activity
+     * which will communicate with the server.  
+     * @param v
+     */
 	public void manageRegButton(View v) {
 		// TODO Auto-generated method stub
     	    	
@@ -111,12 +128,7 @@ public class RegisterActivity extends Activity {
 			intent.putExtras(bundle); 
 			startActivity(intent);		
 			finish();
-			
-
-			/*the activity are allocated as a stack memory so if you don't termin it and you tip come
-			 back button the activity is still there */
-			//finish();
-		
+				
 		}
 		
 		else{

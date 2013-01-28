@@ -1,7 +1,5 @@
 package com.activities.am1;
 
-
-
 import java.util.ArrayList;
 
 import com.adapters.am1.ListAnswerAdapter;
@@ -14,16 +12,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * ShowQuestionActivity
  * Created on November 18, 2012
  * @author Valentina Pontillo <a href =  mailto : v.pontillo@studenti.unina.it">v.pontillo@studenti.unina.it</a>
+ * updated by Bernardo Plaza
+ * last updated on January 10th, 2013
  */
 public class ShowQuestionActivity extends Activity {
 	TextView courseTextField  = null;
@@ -33,6 +33,13 @@ public class ShowQuestionActivity extends Activity {
 	ListView listViewAnswers = null;
 	ListAnswerAdapter adapterAnswers = null;
 	ArrayList<Answer> answerList = new ArrayList<Answer>();
+	
+	Button imageButtonPositive= null;
+	Button imageButtonNegative= null;
+	TextView txtview_Rates= null;
+	int rates=0;
+	boolean FLAG_RATED=false;
+	
 	/**
 	 * Default method to create an activity in which there has been obtained the extras parameters 
 	 * from Intent control (if the button Submit Question is pushed) and  has been taken the object Question 
@@ -44,6 +51,7 @@ public class ShowQuestionActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_show_question);
+		
 		//here you can get extras parameters from Intent
 		Bundle extras = getIntent().getExtras();
 		//here you can get the object Question and relatives parameters from extras
@@ -51,16 +59,27 @@ public class ShowQuestionActivity extends Activity {
 		String coursePassed  = questionPassed.getCourse();
 		String subjectPassed = questionPassed.getSubject();
 		String contentPassed = questionPassed.getContent();
+		String authorPassed= questionPassed.getAuthor();
+		int numberOfRatesPassed= questionPassed.getNumberOfRates();
 		//assign to the id of the object the field of the Question object
 		//courseTextField = (EditText) findViewById(R.id.editText_CourseQuestion_ShowQuestion);
 		courseTextField = (TextView) findViewById(R.id.editText_CourseQuestion_ShowQuestion);
 		courseTextField.setText(coursePassed); 
 		subjectTextField = (TextView) findViewById(R.id.editText_SubjectQuestion_ShowQuestion);
-		//				subjectTextField = (EditText) findViewById(R.id.editText_SubjectQuestion_ShowQuestion);
+		//subjectTextField = (EditText) findViewById(R.id.editText_SubjectQuestion_ShowQuestion);
 		subjectTextField.setText(subjectPassed);
-		//				contentTextField = (EditText) findViewById(R.id.editText_ContentQuestion_ShowQuestion);
+		//contentTextField = (EditText) findViewById(R.id.editText_ContentQuestion_ShowQuestion);
 		contentTextField = (TextView) findViewById(R.id.editText_ContentQuestion_ShowQuestion);
 		contentTextField.setText(contentPassed);
+		contentTextField = (TextView) findViewById(R.id.editText_Author);
+		contentTextField.setText(authorPassed);
+		txtview_Rates = (TextView) findViewById(R.id.txtview_rates);
+		imageButtonNegative = (Button) findViewById(R.id.rate_negative);
+		imageButtonPositive = (Button) findViewById(R.id.rate_positive);
+		txtview_Rates.setText(String.valueOf(numberOfRatesPassed));
+		
+		rates= numberOfRatesPassed;
+		
 
 		buttonAnswerQuestion = (Button) findViewById(R.id.button_Answer_AnswerQuestionActivity);
 		//Configure  listener for the button on click event
@@ -76,6 +95,23 @@ public class ShowQuestionActivity extends Activity {
 		}
 		adapterAnswers = new ListAnswerAdapter(this, answerList, R.layout.element_list_answer);
 		listViewAnswers.setAdapter(adapterAnswers);
+			
+	
+		imageButtonPositive.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View arg0) {
+				ratedPositive(arg0);
+			}
+		});
+		
+		imageButtonNegative.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View arg0) {
+				ratedNegative(arg0);
+			}
+		});
+		
+		
 	} 
 	/** This method pop the results(extras) from the Intent and use those to create a new object Answer to add at list.
 	 * @param requestCode int
@@ -109,5 +145,43 @@ public class ShowQuestionActivity extends Activity {
 		//Launch an activity for which you would like a result when it finished		
 		this.startActivityForResult(buttonIntent, Constant.ADD_PUBLIC_QUESTION);
 	}
+
+	public boolean checkiFRated(int newRate){
+		
+		//! ask the server if the user already voted this
+		return(FLAG_RATED);
+	}
+	
+	public int setRate(int rateToServer){
+		int resultOfRate=1;
+		//! send rate to server and check if ok.
+		FLAG_RATED=true;
+		return resultOfRate;
+	}
+	
+	public void ratedPositive(View arg0){
+		if (!checkiFRated(1)){
+			Toast.makeText(ShowQuestionActivity.this,"RATED POSSITIVE",	Toast.LENGTH_SHORT).show();
+			rates++;
+			txtview_Rates.setText(String.valueOf(rates));	
+			setRate(Constant.POSITIVE_RATE);
+		}
+		else {
+			Toast.makeText(ShowQuestionActivity.this,"YOU ALREADY RATED THIS QUESTION",	Toast.LENGTH_SHORT).show();
+		}	
+	}
+	
+	public void ratedNegative(View arg0){
+		if (!checkiFRated(-1)){
+			Toast.makeText(ShowQuestionActivity.this,"RATED NEGATIVE",Toast.LENGTH_SHORT).show();
+			rates--;
+			txtview_Rates.setText(String.valueOf(rates));
+			setRate(Constant.NEGATIVE_RATE);
+		}
+		else {
+			Toast.makeText(ShowQuestionActivity.this,"YOU ALREADY RATED THIS QUESTION",	Toast.LENGTH_SHORT).show();
+		}	
+	}
+
 }
 

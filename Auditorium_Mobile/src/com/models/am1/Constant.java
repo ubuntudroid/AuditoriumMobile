@@ -10,4 +10,6 @@ public class Constant {
 	 * Class of Constant.
 	 */
 	public static final int ADD_PUBLIC_QUESTION = 0;
+	public static final int POSITIVE_RATE = 1;
+	public static final int NEGATIVE_RATE = -1;
 }

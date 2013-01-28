@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme" >
     
         <!-- Main Activity: LoginActivity -->
-        <activity android:name=".LoginActivity"
+        <activity android:name=".ListPublicQuestionActivity"
                   android:label="Login to your Account"
                   android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -42,11 +42,11 @@
         		  android:windowSoftInputMode="stateHidden"  >
         </activity>
         
-        <!-- Activity List Questions -->
+        <!-- Activity List Questions 
         <activity
             android:name=".ListPublicQuestionActivity"
             android:label="@string/title_activity_list_question" >
-        </activity>
+        </activity>-->
         
         <!-- Activity  Add Questions-->
         <activity

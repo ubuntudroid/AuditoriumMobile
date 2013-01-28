@@ -22,11 +22,13 @@
     <string name="label_Title_AddAnAnswer">Can you answer the question?</string>
     <string name="label_AnswerSubTitle_show_question">sorted by rating</string>
     <string name="label_Answer_AddAnswer">Add an answer.</string>
+    <string name="title_activity_quiz">Create Quiz.</string>
     <string name="buttonSubmitAnswer">Submit your answer</string>
     <string name="buttonAnswerQuestion">Answer</string>
     <string name="buttonCommentQuestion">Comment</string>
     <string name="label_SubTitle_AddAnAnswer">If not, add a comment.</string>
     <string name="title_activity_add_answer">AddAnswerActivity</string>
+    <string name="post_author">author</string>
     
     <!-- login strings -->
     <string name="logo">Logo</string>
@@ -61,4 +63,26 @@
 	<string name="riga2">riga2</string>
 	<string name="risposta">risposta</string>
 	
+	<!-- rate strings -->
+	<string name="rate_number">X</string>
+	<string name="firstline">this is the first line of the row</string>
+	<string name="secondline">this is the second line of the row</string>
+
+	<!-- quiz strings -->
+	<string name="textview_post_quiz">Post a Quiz</string>
+	<string name="textview_post_quiz2">Please writte the question</string>
+	<string name="textview_choices">Please add the diferents choices</string>
+	<string name="textview_option_number">Option </string>
+	<string name="textview_add_choice">Add Choice </string>
+	<string name="textview_select_answer">Select the correct answer</string>
+	<string name="Button_publish_quiz">Publish Quiz</string>
+	<string name="Button_delete_choices">Delete Selected Items</string>
+	<string name="EditText_EnterChoice">Enter choice...</string>
+	<string name="EditText_QuizListEmpty">No choices added</string>
+	
+	<string name="Menu_Public">Select the different options</string>
+	<string name="Menu_Add_Question">Add a question</string>
+	<string name="Menu_Logout">Logout</string>
+	<string name="Menu_Quiz">Create a Quiz</string>
+
 </resources>

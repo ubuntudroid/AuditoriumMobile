@@ -11,7 +11,7 @@
         android:layout_above="@+id/textView_ElementListAnswer"
         android:text="@string/answer"
         android:textColor="#FFFFFF"
-        android:background="#6897E8"
+        android:background="#ADADA0"
         android:textAppearance="?android:attr/textAppearanceMedium"
         /> 
 	

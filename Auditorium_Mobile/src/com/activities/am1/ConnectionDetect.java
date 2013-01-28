@@ -4,11 +4,10 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
  
-/*This class detects the Internet connection status in order to display a popup message 
- * if there is no Internet access on the device.
+/** This class detects the Internet connection status in order to display a popup message 
+ *  if there is no Internet access on the device.
  * 
- *   isConnectingToInternet() will check at any moment the connection status */
-
+ *  with isConnectingToInternet() will check at any moment the connection status */
 public class ConnectionDetect {
  
     private Context _context;

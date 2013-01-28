@@ -77,11 +77,11 @@ public class ListQuestionAdapter extends BaseAdapter
 		if (convertView == null){
 			//inflate assign layout to object view
 			LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			view = layoutInflater.inflate(layoutId,null);
+			view = layoutInflater.inflate(layoutId,parent, false);
 		}
 
-		TextView questionCourseShown = (TextView) view.findViewById(R.id.textViewCourse);
-		TextView questionSubjectShown  = (TextView) view.findViewById(R.id.textViewTitle);
+		TextView questionCourseShown = (TextView) view.findViewById(R.id.textView_List_Course);
+		TextView questionSubjectShown  = (TextView) view.findViewById(R.id.textView_List_Title);
 		//get the specific element from the list
 		Question questionInList = questionsList.get(position);
 		//setting the field about course and object

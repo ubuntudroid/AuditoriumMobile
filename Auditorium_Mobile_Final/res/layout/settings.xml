@@ -1,0 +1,59 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/LinearLayout_AddQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@layout/header_gradient"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView_Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scrollHorizontally="true"
+            android:layout_marginLeft="5dp"
+            android:text="Notification settings"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+         <TextView
+            android:id="@+id/textView_Settings2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="Please select which notifications you want to receibe"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		<View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray" />
+
+		<CheckBox
+		    android:id="@+id/chk_settings_question"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+		    android:text="Someone publish a question" />
+		
+		<CheckBox
+		    android:id="@+id/chk_settings_answer"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+		    android:text="Someone publish an answer" />
+		
+		<CheckBox
+		    android:id="@+id/chk_settings_rate"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+		    android:text="Someone rate you" />
+    </LinearLayout>

@@ -78,10 +78,10 @@ public class ListAnswerAdapter extends BaseAdapter
 		if (convertView == null){
 			//inflate assign layout to object view
 			LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			view = layoutInflater.inflate(layoutId,null);
+			view = layoutInflater.inflate(layoutId,parent, false);
 		}
 
-		TextView elementListAnswer = (TextView) view.findViewById(R.id.textView_ElementListAnswer);
+		TextView elementListAnswer = (TextView) view.findViewById(R.id.textView_List_Answer);
 		Answer answer = (Answer) answerList.get(position);
 		elementListAnswer.setText(answer.getAnswer());
 		return view;

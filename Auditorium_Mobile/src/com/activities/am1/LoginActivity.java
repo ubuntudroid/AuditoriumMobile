@@ -18,7 +18,11 @@ import android.widget.Toast;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-
+/**
+ * LoginActivity
+ * Created on January 8th, 2013
+ * @author Bernardo Plaza 
+ */
 public class LoginActivity extends Activity {
    
 	 TextView registerScreen = null;
@@ -31,8 +35,15 @@ public class LoginActivity extends Activity {
      CheckBox chkLogAsTeacher = null;
      
      boolean isTeacher=false;
-     
-	@Override
+    
+    /**
+    * This activity is the first one which the application runs when it started
+ 	* Is used to log in in the Auditorium system, pretending to seems as much 
+ 	* as is possible to the web site.
+ 	* An email address and the password is needed. 
+ 	*  
+ 	*/
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);              
@@ -45,6 +56,8 @@ public class LoginActivity extends Activity {
         email = (EditText) findViewById (R.id.EditText_emailAddress);
         password = (EditText) findViewById (R.id.EditText_password);
         
+        /*The application only runs if there is Internet connection in the device*/
+        
         /* Detecting Internet connection status*/
         
         Boolean isInternetPresent = false;
@@ -53,21 +66,98 @@ public class LoginActivity extends Activity {
         // get Internet status
         isInternetPresent = conndetection.isConnectingToInternet();
         
-     // check for Internet status
+        // check for Internet status
         if (!isInternetPresent) {
         	// Internet connection is not present
         	 // Ask user to connect to Internet
         	showAlertDialog(LoginActivity.this, "No Internet Connection",
                     "Please enable Internet connection.", false);
         	
-        }
-               
+        } //end of checking Internet status  
+        
+        
+        addListeners();
+        
+        	
+	}
+    
+    /**
+     * manageLoginButton check first if there is some text in the different fields
+     * then a bundle element is created to send the information to the other activity
+     * which will communicate with the server.  
+     * @param v
+     */
+    public void manageLoginButton(View v) {
+		// TODO Auto-generated method stub
+    	    	
+    	String emailText  = email.getText().toString();
+		String passwordText = password.getText().toString();
+		
+		/*We don't want empty fields so we have to check on subject,course and content field */
+		if(emailText.equals("") || passwordText.equals("") ){
+			/*show a message for a long(or short)period */
+			Toast.makeText(this, R.string.errorEmptyString, Toast.LENGTH_LONG).show();
+		}
+		
+		else{
+
+			Toast.makeText(this, R.string.LoginIn, Toast.LENGTH_LONG).show();
+			
+			//Create a bundle with the Data which is sent to the next activity
+			Bundle bundleLog = new Bundle();
+			bundleLog.putString("Email", emailText);
+			bundleLog.putString("Password", passwordText);
+			bundleLog.putBoolean("IsTeacher", isTeacher);
+			
+			Intent intent = new Intent (LoginActivity.this, SendLoginRequestActivity.class); //getApplicationContext() LoginActivity.this
+			intent.putExtras(bundleLog);
+			startActivity(intent);	
+			
+			//finish();
+		}
+	}
+    
+    /* Display an Alert Dialog 
+     * 
+     * Set Dialog Title, message, icon and button
+     * when is pressed the application is closed 
+     * */
+    public void showAlertDialog(Context context, String title, String message, Boolean status) {
+        AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+ 
+        alertDialog.setTitle(title);
+        alertDialog.setMessage(message);
+        alertDialog.setIcon((status) ? R.drawable.success : R.drawable.fail);
+ 
+ 
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            	finish();
+            }
+        });
+ 
+        // Showing Alert Message
+        alertDialog.show();
+    }
+    
+    public void  manageCheckBoxTeacher(View v) {
+		//if is checked there is an advertisement message
+		if (((CheckBox) v).isChecked()) {
+			//toggle teacher to send it 
+			isTeacher = true;
+		}
+		else isTeacher=false;
+	}    
+ 
+    public void addListeners() {
+    	
+/* Listeners of the clickable items such us button and hlinks*/
+        
         // Listening to Sign in button
         buttonS.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				//save data and send it 
-				//show wait
+				// ! show wait until 
 				manageLoginButton(v);
 			}
 		});
@@ -81,8 +171,7 @@ public class LoginActivity extends Activity {
 				startActivity(i);
 			}
 		});
-        
-        
+               
         // Listening to change mail
         changeMail.setOnClickListener(new View.OnClickListener() {
 			
@@ -118,70 +207,7 @@ public class LoginActivity extends Activity {
 				manageCheckBoxTeacher(v);
 			}
 		});
-	
-	}
-    
-     
-    public void manageLoginButton(View v) {
-		// TODO Auto-generated method stub
-    	    	
-    	String emailText  = email.getText().toString();
-		String passwordText = password.getText().toString();
-		
-		/*We don't want empty fields so we have to check on subject,course and content field */
-		if(emailText.equals("") || passwordText.equals("") ){
-			/*show a message for a long(or short)period */
-			Toast.makeText(this, R.string.errorEmptyString, Toast.LENGTH_LONG).show();
-		}
-		
-		else{
-
-			Toast.makeText(this, R.string.LoginIn, Toast.LENGTH_LONG).show();
-			
-			//Create a bundle with the Data which is sent to the next activity
-			Bundle bundleLog = new Bundle();
-			bundleLog.putString("Email", emailText);
-			bundleLog.putString("Password", passwordText);
-			bundleLog.putBoolean("IsTeacher", isTeacher);
-			
-			Intent intent = new Intent (LoginActivity.this, SendLoginRequestActivity.class); //getApplicationContext() LoginActivity.this
-			intent.putExtras(bundleLog);
-			startActivity(intent);	
-			
-			//finish();
-		}
-	}
-    
-    /*Function to display simple Alert Dialog 
-     * 
-     * Set Dialog Title, message, icon and button
-     * when is pressed the application is closed */
-    public void showAlertDialog(Context context, String title, String message, Boolean status) {
-        AlertDialog alertDialog = new AlertDialog.Builder(context).create();
- 
-        alertDialog.setTitle(title);
-        alertDialog.setMessage(message);
-        alertDialog.setIcon((status) ? R.drawable.success : R.drawable.fail);
- 
- 
-        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-            	finish();
-            }
-        });
- 
-        // Showing Alert Message
-        alertDialog.show();
     }
-    
-    public void  manageCheckBoxTeacher(View v) {
-		//if is checked there is an advertisement message
-		if (((CheckBox) v).isChecked()) {
-			//toggle teacher to send it 
-			isTeacher = true;
-		}
-		else isTeacher=false;
-	}    
     
     
 }//end

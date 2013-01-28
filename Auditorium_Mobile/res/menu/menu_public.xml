@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   
+    <item
+        android:id="@+id/menu_add_question"
+        android:icon="@drawable/add_question"
+        android:title="@string/Menu_Add_Question"></item>
+    
+    <item 
+        android:id="@+id/menu_logout"
+        android:icon="@drawable/logout"
+        android:title="@string/Menu_Logout"></item>
+      
+        <!-- menu group if is teacher-->
+    <group android:id="@+id/group_isteacher">
+        <item android:id="@+id/menu_quiz"
+            android:icon="@drawable/quiz"
+              android:title="@string/Menu_Quiz" />
+        
+    </group>
+    
+</menu>
