@@ -1,0 +1,126 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" 
+    android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/LinearLayout_AddQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView_MainTitleQuestion_AddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/labelMainTitleQuestion"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textView_ChooseCourseQuestion_AddQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/labelChooseCourseQuestion"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText_CourseQuestion_AddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:inputType="textShortMessage" />
+
+        <requestFocus android:layout_width="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView_SubjectQuestion_AddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelTypeSubjectQuestion"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText_SubjectQuestion_AddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:inputType="textShortMessage" />
+
+        <TextView
+            android:id="@+id/textView_ContentQuestion_AddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/labelTypeContentQuestion"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText_ContentQuestion_AddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="top"
+            android:ems="10"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="4" 
+            android:gravity="top"
+            android:inputType="textMultiLine" />
+
+        <CheckBox
+            android:id="@+id/chekBox_PrivateQuestion_AddQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/checkBoxToAskAprivateQuestion"
+            android:typeface="serif" />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom|fill"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button_SubmitQuestion_AddQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/buttonSubmitQuestion"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/button_CancellQuestion_CancelQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/buttonCancelQuestion"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+    </LinearLayout> 
+    </ScrollView>
+    

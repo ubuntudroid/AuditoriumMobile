@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:background="@layout/header_gradient" >
+
+ 	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="?android:attr/listPreferredItemHeight"
+	    android:padding="6dip">
+	
+	    <Button
+	        android:id="@+id/rate_positive_answer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/txtview_rates_answer"
+	        android:layout_alignParentTop="true"
+	        android:background="@drawable/button_positive" />
+	
+	    <TextView
+	        android:id="@+id/txtview_rates_answer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/rate_positive_answer"	        
+	        android:text="@string/rate_number" />
+
+	    <Button
+	        android:id="@+id/rate_negative_answer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/txtview_rates_answer"
+	        android:background="@drawable/button_negative" />
+
+	    <TextView
+	        android:id="@+id/editText_Answer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/rate_positive_answer"
+	        android:layout_toRightOf="@+id/rate_positive_answer"
+	        android:ellipsize="marquee"
+	        android:singleLine="false"
+	        android:text="@string/firstline" />
+	
+	</RelativeLayout>
+       
+<!-- answers start -->
+
+         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal">
+
+             <TextView
+                 android:id="@+id/editText_Author_answer"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="5dp"
+                 android:layout_marginRight="5dp"
+                 android:layout_marginTop="8dp"
+                 android:textColor="#E4F70C"
+                 android:text="@string/post_author"
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
+	         
+	        <TextView
+	            android:id="@+id/editText_Date_answer"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	             android:layout_marginTop="8dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="5dp"
+	            android:text="@string/post_date"
+	            android:textColor="#E4F70C"
+	            android:textAppearance="?android:attr/textAppearanceSmall" />
+	        
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+       
+    </LinearLayout>

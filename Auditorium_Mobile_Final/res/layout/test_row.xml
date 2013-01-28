@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+    
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="?android:attr/listPreferredItemHeight"
+	    
+	    android:padding="6dip">
+	
+	    <Button
+	        android:id="@+id/rate_possitive"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/txtview_rates"
+	        android:layout_alignParentTop="true"
+	        android:background="@drawable/button_positive" />
+	
+	    <TextView
+	        android:id="@+id/textview_firstLine"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/txtview_rates"
+	        android:layout_alignLeft="@+id/textview_secondLine"
+	        android:ellipsize="marquee"
+	        android:singleLine="true"
+	        android:text="@string/firstline" />
+	
+	    <TextView
+	        android:id="@+id/textview_secondLine"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/txtview_rates"
+	        android:layout_alignBottom="@+id/txtview_rates"
+	        android:layout_toRightOf="@+id/rate_negative"
+	        android:text="@string/secondline" />
+	
+	    <TextView
+	        android:id="@+id/txtview_rates"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/rate_possitive"
+	        
+	        android:text="@string/rate_number" />
+
+	    <Button
+	        android:id="@+id/rate_negative"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/txtview_rates"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/txtview_rates"
+	        android:background="@drawable/button_negative" />
+	
+	</RelativeLayout>
+</ScrollView>

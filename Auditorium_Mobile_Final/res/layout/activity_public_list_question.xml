@@ -1,0 +1,32 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/LinearLayoutListQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@layout/header_gradient" 
+        android:orientation="vertical" >
+        
+	<TextView
+	    android:id="@+id/textViewListQuestion"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:text="@string/listTitle"
+	    android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	
+
+	
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewListQuestion" >
+    </ListView>
+
+</RelativeLayout>

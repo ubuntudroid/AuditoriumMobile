@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@layout/header_gradient" >
+
+  <RelativeLayout 
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content" 
+  		android:background="@layout/header_gradient" >
+  		 		
+  		<!--  Header  Starts-->
+  		<LinearLayout android:id="@+id/header"
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				
+  				android:paddingTop="5dip"
+  				android:paddingBottom="5dip">
+  				<!-- Logo Start-->
+
+  				<ImageView
+  				    android:layout_width="match_parent"
+  				    android:layout_height="wrap_content"
+  				    android:layout_marginLeft="10dip"
+  				    android:contentDescription="@string/logo" 
+  				    android:src="@drawable/logo" />
+
+  				<!-- Logo Ends -->
+  		</LinearLayout>
+  		<!--  Header Ends --> 
+  		
+  		<!-- Create Quiz Form Begins -->
+  		<LinearLayout
+		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  android:orientation="vertical"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content"
+		  android:padding="10dip"
+		  android:layout_below="@id/header">
+
+		
+		  <TextView android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:textColor="#372c24"
+		  		android:textStyle="bold"
+		  		android:textSize="20sp"
+		  		android:text="@string/textview_post_quiz"/>
+		 
+		  <TextView android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:paddingBottom="5dip"
+		  		android:textColor="#372c24"
+		  		android:textSize="15sp"
+		  		android:text="@string/textview_post_quiz2"/>
+		 
+		  <EditText android:id="@+id/EditText_quiz_question"
+		      	android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:layout_marginTop="5dip"
+		  		android:layout_marginBottom="5dip"
+		  		android:inputType="text"
+		  		android:singleLine="true"/>
+		  
+		 <TextView android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:paddingBottom="5dip"
+		  		android:textColor="#372c24"
+		  		android:textSize="15sp"
+		  		android:text="@string/textview_choices"/>
+		 
+		 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:orientation="vertical" >
+
+				<EditText
+				    android:id="@+id/EditText_Choice1"
+				    android:layout_width="240dp"
+				    android:layout_height="wrap_content"
+				    android:hint="@string/EditText_EnterChoice"
+				    android:inputType="text" />
+
+				<Button
+				    android:id="@+id/Button_addChoice"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_alignBottom="@+id/EditText_Choice1"
+				    android:layout_alignParentTop="true"
+				    android:textSize="8sp"			    
+				    android:layout_toRightOf="@id/EditText_Choice1"
+				    android:text="@string/textview_add_choice" />
+		 
+			    <ListView
+				        android:id="@android:id/list"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_below="@id/EditText_Choice1"
+				        android:choiceMode="multipleChoice"
+				        android:scrollbars="vertical" />
+				 
+			    <TextView
+				        android:id="@android:id/empty"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_below="@id/EditText_Choice1"
+				        android:text="@string/EditText_QuizListEmpty"
+				        android:gravity="center_horizontal" />	
+
+		 </RelativeLayout>
+
+		 <Button
+		     android:id="@+id/Button_DeleteChoices"
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="5dp"
+		     android:text="@string/Button_delete_choices" />
+		 		
+		 <Button
+		     android:id="@+id/Button_publish_quiz"
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:text="@string/Button_publish_quiz" />
+		    
+	</LinearLayout>
+  		
+  		
+  	</RelativeLayout>
+</LinearLayout>
